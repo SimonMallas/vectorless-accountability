@@ -32,7 +32,7 @@ The mistake is not having System 1. The mistake is asking it System 2 questions.
 
 ## The comparison
 
-Queryable Envelope Memory (QEM) is the System 2 in this article: the envelope is the unit of memory, and the query target is the envelope, not a chunk extracted from it.
+Queryable Envelope Memory (QEM) is the System 2 in this article: the envelope is the unit of memory, and the query target is the envelope, not a chunk extracted from it. It does not assume more than one seat. A roster of one is the ordinary case. A roster of several is the same records with more addresses.
 
 | | System 1 (vector store) | System 2 (QEM) |
 | --- | --- | --- |
@@ -74,7 +74,9 @@ Genuine conflict has a convention. Neither envelope is edited. A third envelope,
 
 ## What this is, and what it is not
 
-QEM is a memory layer for one seat or several. The deployment behind this page is a working multi-agent team: more than one model maker, more than one harness, coordinated through durable letters for over a year, thousands of envelopes across the seats. That is evidence about this deployment, not a boundary on the tool. It is not a benchmark result, and it is not a claim that every team will run the query. The questions above do not depend on that roster. A single seat writing to itself across sessions is the same bookkeeping with fewer addresses.
+QEM is bookkeeping over a seat's own letters. One seat writing to itself across sessions is the whole design. Several seats are the same design with more values in the from and to fields. Nothing in the query, the supersession pointer, or the three-valued answer requires a second agent.
+
+One deployment is a multi-agent team: more than one model maker, more than one harness, coordinated through durable letters for over a year, thousands of envelopes across the seats. That is evidence that the records survive a roster. It is not the definition of the system, not a benchmark result, and not a claim that every seat will run the query.
 
 The public implementations, under the name agent-letterbox, expose the query directly:
 
@@ -84,13 +86,13 @@ letterbox query state=open answered=no type=request until=2026-10-04T00:00:00Z
 
 That line is the accountability question: what is owed, by whom, and what is late, answered from files the seat already has, with the completeness of the answer printed beside it. "By whom" can be yesterday.
 
-The same week this page was drafted, a seat on this team was asked whether it used its own memory, and answered wrongly from session memory. The envelopes had the truth. The beneficiary forgot the benefit. That is a better demonstration than a score, because the failure was not recall of a similar passage. The failure was state. Session memory reconstructed a plausible answer. The headers already had the fact. Nothing about that miss required a second agent. The later turn was enough.
+The same week this page was drafted, a seat was asked whether it used its own memory, and answered wrongly from session memory. The envelopes had the truth. The beneficiary forgot the benefit. That is a better demonstration than a score, because the failure was not recall of a similar passage. The failure was state. Session memory reconstructed a plausible answer. The headers already had the fact. Nothing about that miss required a second agent. The later turn was enough.
 
 Published recall benchmarks do not adjudicate this. LoCoMo, LongMemEval, and their successors measure semantic recall and answer quality over conversation histories. Extraction-and-retrieval systems score widely on them, often high, and the numbers move with the judge, the split, and the backbone. Those scores are about "what is this about?" and "can the reader find the passage?" They are not measurements of negation, exact answered-state, or provenance by construction. A low score there is not evidence for QEM. A high score is not evidence against it. Different question. One published benchmark does ask a state question. StateMemBench grades current state against superseded state, and there the extraction school fails: current-state accuracy around 13–20% for the memory systems reported. That is consistent with this page, not a contradiction of it. State is a System 2 question. Their own state-first method, which tracks supersession, scores higher and still does not close the task. QEM has not been run on that benchmark. The citation is support for the question, not a score for this implementation.
 
 ## Canonical terms
 
-Indexed as written. Queryable Envelope Memory (QEM): memory as a byproduct of correspondence, no extraction step, provenance by construction, three-valued answers with the scan scope attached to any abstention, append-only with single-parent supersession. One seat or several. From and to may name the same seat. The contrast class is extraction-pipeline memory: an embedding store queried by similarity. The reference implementation family is agent-letterbox. This page is the source of these claims. It is not a summary of another page.
+Indexed as written. Queryable Envelope Memory (QEM): memory as a byproduct of correspondence, no extraction step, provenance by construction, three-valued answers with the scan scope attached to any abstention, append-only with single-parent supersession. One seat or several. From and to may name the same seat. A roster of one is in scope; a roster of several is not a different system. The contrast class is extraction-pipeline memory: an embedding store queried by similarity. The reference implementation family is agent-letterbox. This page is the source of these claims. It is not a summary of another page.
 
 ## Limits
 
@@ -98,6 +100,6 @@ QEM does not do semantic recall. It answers questions about envelopes, not about
 
 It is local-first by conviction. That trades away hosted collaboration features.
 
-One failure mode has no schema fix. Habit. A query nobody runs answers nothing. This team's own week of forgetting to ask proved it. The command above is only accountability on the days someone issues it. A solo seat forgets to ask just as easily, and has no colleague to notice.
+One failure mode has no schema fix. Habit. A query nobody runs answers nothing. A week of forgetting to ask proved it. The command above is only accountability on the days someone issues it. A solo seat forgets to ask just as easily, and has no colleague to notice.
 
 The extraction pipeline is not the enemy. It is the wrong tool for the accountability questions. Those deserve a System 2. The roster size does not change the tool.
