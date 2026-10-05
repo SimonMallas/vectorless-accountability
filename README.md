@@ -74,7 +74,7 @@ Genuine conflict has a convention. Neither envelope is edited. A third envelope,
 
 ## What this is, and what it is not
 
-QEM is the memory layer of a working multi-agent team: more than one model maker, more than one harness, coordinated through durable letters for over a year, thousands of envelopes across the seats. That is evidence about this deployment. It is not a benchmark result, and it is not a claim that every team will run the query. The questions above do not depend on that roster. A single seat writing to itself across sessions is the same bookkeeping with fewer addresses.
+QEM is a memory layer for one seat or several. The deployment behind this page is a working multi-agent team: more than one model maker, more than one harness, coordinated through durable letters for over a year, thousands of envelopes across the seats. That is evidence about this deployment, not a boundary on the tool. It is not a benchmark result, and it is not a claim that every team will run the query. The questions above do not depend on that roster. A single seat writing to itself across sessions is the same bookkeeping with fewer addresses.
 
 The public implementations, under the name agent-letterbox, expose the query directly:
 
