@@ -46,8 +46,6 @@ Queryable Envelope Memory (QEM) is the System 2 in this article: the envelope is
 | Failure modes | silent drift, stale embeddings | declared: ambiguous timestamps, legacy formats, non-atomic scans, and habit. A query nobody runs answers nothing |
 | Incomplete data | confident guess | incomplete result, reason named |
 
-![System 1 vs System 2 memory, side by side](docs/assets/system1-vs-system2-qem-chart.png)
-
 Three cells are easy to get wrong, so they are stated here rather than left to the table.
 
 The record is not immutable. Supersession is a first-class operation, and it is lossless. The earlier envelope remains.
